@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %} {% block content %}
+{% load simple_tags %}
+
+<br />
+
+<div class="container">
+  <h2>Добавить уведомления</h2>
+  <br />
+  <div class="row col-sm-3">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <input type="submit" value="Submit" class="btn btn-primary" />
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

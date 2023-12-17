@@ -1,0 +1,69 @@
+{% extends 'base/base.html' %} {% block content %}
+{% load simple_tags %}
+
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2"
+>
+  <h2 class="h2">Уведомления</h2>
+  <a href="{% url 'notification_form' %}" class="btn btn-primary">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-plus-circle-fill"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+      />
+    </svg>
+    Добавить уведомления</a
+  >
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group me-2"></div>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Название уведомления</th>
+        <th scope="col">Текст</th>
+        <th scope="col">Время создание</th>
+        <th scope="col">Картинка</th>
+        <th scope="col">Операции</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for note in notification %}
+      <tr>
+        <td>{{ note.theme }}</td>
+        <td>{{ note.maintxt }}</td>
+        <td>{{ note.inputdate }}</td>
+        <td><img src="{{ note.image.url }}" width="50" height="50" /></td>
+        <td>
+          <!--a href="{% url 'region_update' note.id %}"
+            ><i
+              class="bi bi-eye-fill"
+              style="color: blue; font-size: 18px"
+            ></i
+          ></a-->
+          <a href="{% url 'notification_update' note.id %}"
+            ><i
+              class="bi bi-pencil-fill"
+              style="color: green; font-size: 18px"
+            ></i
+          ></a>          
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5">Пока нет уведомления</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}

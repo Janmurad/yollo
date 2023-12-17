@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    {% comment %} {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %} {% endcomment %}
+    
+    {% load static %}
+    <link
+      href="{% static 'assets/icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    {% comment %} {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %} {% endcomment %}
+    
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      href="{% static 'images/favicon.png' %}"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon.png' %}"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="{% static 'images/favicon.png' %}"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="mask-icon"
+      href="{% static 'images/favicon.png' %}"
+      color="#712cf9"
+    />
+    <link rel="icon" href="{% static 'images/favicon.png' %}" />
+    <meta name="theme-color" content="#712cf9" />
+
+    <style>
+      .btn-color {
+        background-color: #0e1c36;
+        color: #fff;
+      }
+
+      .profile-image-pic {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+      }
+
+      .cardbody-color {
+        background-color: #ebf2fa;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+    {% load static %}
+  </head>
+  <body>
+    <div class="container">
+      {% block content %}
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card my-5">
+            <form method="POST" class="card-body cardbody-color p-lg-5">
+              <div class="text-center">
+                <img
+                  src="{% static 'images/favicons.png' %}"
+                  class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                  width="200px"
+                  alt="profile"
+                />
+              </div>
+
+              {% csrf_token %} {{ form.username }}
+
+              <div class="mb-3">
+              </div>
+              {{ form.phone }}
+              <div class="mb-3">
+              </div>
+              {{ form.password }}
+              <div class="mb-3">
+              </div>
+              {{ form.repassword }}
+              <div class="mb-3">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-color px-5 mb-5 w-100">
+                  Завести аккаунт
+                </button>
+              </div>
+              <div id="emailHelp" class="form-text text-center mb-5 text-dark">
+                Если у вас есть аккаунт
+                <a href="{% url 'login' %}" class="text-dark fw-bold"> Логин</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+  </body>
+</html>

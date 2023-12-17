@@ -1,0 +1,7 @@
+*.pyc  
+*~  
+__pycache__  
+yollov1env  
+db.sqlite3  
+/static  
+.DS_Store 

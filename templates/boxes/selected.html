@@ -1,0 +1,86 @@
+{% extends 'base/base.html' %} {% block title %}Dashboard{% endblock title %}
+{% block content %}
+
+<div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
+    <h3 class="h3">Выделенные коробки</h3>
+    <div class="row">
+        <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <!-- {{ form.userto }} -->
+            <!-- {{ form.status }} -->
+            <div class="col-6">
+                <div class="d-flex align-items-center justify-content-evenly">
+                    <div class="col-md-4 position-relative">
+                        <select class="form-control" name="userto" id="id_userto" required>
+                            <option value="" selected disabled>--Выбрать-пользователя---</option>
+                            {% for cuser in cuserlist %}
+                            <option value="{{ cuser.id }}">{{ cuser.name }} - {{ cuser.region }}</option>
+                            {% endfor %}
+                        </select>
+                        <div class="invalid-tooltip">
+                            Пожалуйста, выберите пользователя.
+                        </div>
+                        <div class="valid-tooltip" style="display: none;">
+                            Выглядит неплохо!
+                        </div>
+                    </div>
+                    <div class="col-md-4 position-relative">
+                        <select class="form-control" name="status" id="id_status"
+                            style="margin-left: 10px; margin-right: 10px" required>
+                            <option value="" selected disabled>--Выбрать-статус---</option>
+                            <option value="create">Create</option>
+                            <option value="called">Called</option>
+                            <option value="approved">Approved</option>
+                            <option value="accepted">Accepted</option>
+                            <option value="sent">Sent</option>
+                            <option value="rejected">Rejected</option>
+                            <option value="canceled">Canceled</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                        <div class="invalid-tooltip" style="margin-left: 10px;">
+                            Пожалуйста, выберите статус.
+                        </div>
+                    </div>
+
+                    <input class="btn btn-primary" type="submit" value="Ввод" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th colspan="2">Номер</th>
+                <th>Клиент отправитель</th>
+                <th>Телефон отправителья</th>
+                <th>Регион отправителья</th>
+                <th>Клиент получатель</th>
+                <th>Регион получателья</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for box in cart %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>
+                    <a href="{% url 'boxselect' box.box.id %}">
+                        <span data-feather="check-square" class="align-text-bottom"></span>
+                    </a>
+                </td>
+                <td>{{ box.box.clientfrom }}</td>
+                <td>{{ box.box.phonefrom }}</td>
+                <td>{{ box.box.regionfrom }}</td>
+                <td>{{ box.box.clientto }}</td>
+                <td>{{ box.box.regionto }}</td>
+            </tr>
+            {% empty %}
+            Вы не выбрали коробки
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

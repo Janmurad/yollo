@@ -1,0 +1,333 @@
+{
+  "exportedFrom": "Restfox-1.0.0",
+  "collection": [
+    {
+      "_id": "UaikLXj533affvEqfd1cX",
+      "_type": "request_group",
+      "name": "DJANGO API",
+      "parentId": null,
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 0,
+      "collapsed": true
+    },
+    {
+      "_id": "AkOULLReRr8g1xrNyy3mV",
+      "_type": "request",
+      "name": "Feedback list",
+      "method": "GET",
+      "body": { "mimeType": "No Body" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 0,
+      "url": "http://127.0.0.1/yolloadmin/api/box/feedback",
+      "authentication": {
+        "type": "bearer",
+        "prefix": "Bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1ODg2OTkzLCJpYXQiOjE2OTU4MDA1OTMsImp0aSI6IjZlYTQ5ZWM5LTM5NzEtNDQ5Yi1iMDFkLTc1MzdkNTAwZmYyMiIsInVzZXJfaWQiOjE4fQ.H7ZGuRyAAr9HMxpwU7vpf2YTO8ZbEdsHebD3LlJ2LfE"
+      }
+    },
+    {
+      "_id": "YyKb_ObcpksW6uuIR02QF",
+      "_type": "request",
+      "name": "Feedback post",
+      "method": "POST",
+      "body": { "mimeType": "No Body" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 1,
+      "url": "http://127.0.0.1/yolloadmin/api/box/feedback",
+      "authentication": {
+        "type": "bearer",
+        "prefix": "Bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1ODg2OTkzLCJpYXQiOjE2OTU4MDA1OTMsImp0aSI6IjZlYTQ5ZWM5LTM5NzEtNDQ5Yi1iMDFkLTc1MzdkNTAwZmYyMiIsInVzZXJfaWQiOjE4fQ.H7ZGuRyAAr9HMxpwU7vpf2YTO8ZbEdsHebD3LlJ2LfE"
+      }
+    },
+    {
+      "_id": "g0SI2O46vPKImEwAxgIox",
+      "_type": "request",
+      "method": "POST",
+      "url": "https://yollo.com.tm/yolloadmin/api/token/",
+      "name": "login user",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"username\": \"99365640431\",\"password\": \"Bank1234\"}"
+      },
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 2
+    },
+    {
+      "_id": "kseFzGizHOeLA7okIQpi_",
+      "_type": "request",
+      "method": "POST",
+      "url": "https://yollo.com.tm/yolloadmin/api/token/refresh/",
+      "name": "Refresh token",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5NDYxNjczOCwiaWF0IjoxNjk0MjU2NzM4LCJqdGkiOiIyZmRkN2QxNS1iOGFlLTQ3ZWEtYTQ1Yy1kNjYxYTI5M2Y0YzMiLCJ1c2VyX2lkIjoxNn0.DaGzBZlJTayWYOkailKTqVms_ciedKV_4HM-hrev-V4\"\r\n}"
+      },
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 3
+    },
+    {
+      "_id": "P1Eus0-UK2CToiK35NbQA",
+      "_type": "request",
+      "method": "POST",
+      "url": "http://127.0.0.1/yolloadmin/api/user/apilogin/",
+      "name": "NEW login user",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"username\": \"99365640432\",\n    \"password\": \"Bank1234\"\n}"
+      },
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "parameters": [],
+      "authentication": { "type": "No Auth", "token": "" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 4
+    },
+    {
+      "_id": "IPYgSrzS0FgWDq_DrDw3s",
+      "_type": "request",
+      "method": "GET",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/boxes/9",
+      "name": "Boxes list",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk0MzQzMTM4LCJpYXQiOjE2OTQyNTY3MzgsImp0aSI6IjU1YjVmYTc5LTY1M2QtNDExYy04OTk1LTZjZjY4YjU5ZGQ3YSIsInVzZXJfaWQiOjE2fQ.upv8hR1o48lNr2ZlcOsUn1vVVo0y6hbAku-vkRf3aNY"
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 5
+    },
+    {
+      "_id": "9FzPZeOLXuGxIsdZGw9kE",
+      "_type": "request",
+      "method": "POST",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/boxes",
+      "name": "Boxes post",
+      "body": { "mimeType": "text/plain", "params": [] },
+      "headers": [{ "name": "Content-Type", "value": "text/plain" }],
+      "parameters": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk1ODIxNDU0LCJpYXQiOjE2OTU3OTc0NTQsImp0aSI6ImJmNDBkYzcyZmNkYTRmM2Y4ZTRjYWUyNGMzN2ZhYTk1IiwidXNlcl9pZCI6MTZ9.kmN7TRyDspZp_bWw8025lkvqvU74Ppg64qDgUC_U_zM",
+        "prefix": "Bearer"
+      },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 6,
+      "pathParameters": []
+    },
+    {
+      "_id": "7e7tB2Or1pBITKRr0hZaW",
+      "_type": "request",
+      "method": "POST",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/boxes",
+      "name": "Boxes post Copy",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkyNTQyNjMzLCJpYXQiOjE2OTI1MTg2MzMsImp0aSI6ImYzZDRlZjhjNjhhYjRlMTFiZmM5NWZhMGMwMTIzNmZkIiwidXNlcl9pZCI6OH0.Kr8aqUdic3Wt0ZAx3fT0jzWsyuHsfOTGdGNjGG3yE1I"
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 7
+    },
+    {
+      "_id": "5sO9Xhgjoi1g2IEv-7O74",
+      "_type": "request",
+      "method": "PUT",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/boxes/27",
+      "name": "Boxes update",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjkyNTQyNzY1LCJpYXQiOjE2OTI1MTg3NjUsImp0aSI6IjUzMDZkMTgxMjQ4YTQ3ZWJiMTk4NzBkZGMxMzMxYWIxIiwidXNlcl9pZCI6OH0.y7-cBc3DucZ6iP7wtbZFL2JjrcS5ZaMiNHHm9YkKrtE"
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 8
+    },
+    {
+      "_id": "r2qTMlkeMGVrP8wjo3rM1",
+      "_type": "request",
+      "method": "GET",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/regions",
+      "name": "Regions",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDI4MzQ3LCJpYXQiOjE2ODE0MDQzNDcsImp0aSI6IjA5OTM4OTRkZTU2MTQwMzJiZWYwZTUwNjIzYTlmMTRjIiwidXNlcl9pZCI6MTB9.bNCgrUZXhlgmrYVTgwvQJbQ5TlFkLk4_NZcUkPfZO_8",
+          "disabled": true
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 9
+    },
+    {
+      "_id": "4_sBvuDUd3b66M0qUulo1",
+      "_type": "request",
+      "method": "GET",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/regionshi",
+      "name": "Regions Hi",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDI4MzQ3LCJpYXQiOjE2ODE0MDQzNDcsImp0aSI6IjA5OTM4OTRkZTU2MTQwMzJiZWYwZTUwNjIzYTlmMTRjIiwidXNlcl9pZCI6MTB9.bNCgrUZXhlgmrYVTgwvQJbQ5TlFkLk4_NZcUkPfZO_8",
+          "disabled": true
+        },
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 10
+    },
+    {
+      "_id": "sop7iR_Yz6SJBV2pEHhxl",
+      "_type": "request",
+      "method": "GET",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/regionscity?region_hi=Ahal",
+      "name": "Regions City",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDI4MzQ3LCJpYXQiOjE2ODE0MDQzNDcsImp0aSI6IjA5OTM4OTRkZTU2MTQwMzJiZWYwZTUwNjIzYTlmMTRjIiwidXNlcl9pZCI6MTB9.bNCgrUZXhlgmrYVTgwvQJbQ5TlFkLk4_NZcUkPfZO_8",
+          "disabled": true
+        }
+      ],
+      "parameters": [{ "name": "region_hi", "value": "Ahal" }],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 11
+    },
+    {
+      "_id": "hjiQ0kXXGuMvG1aTOma9q",
+      "_type": "request",
+      "method": "POST",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/regions",
+      "name": "Regions Create",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"name\": \"Tejen\",\r\n    \"tarif\": \"50.00\",\r\n    \"hi_region\": \"Ahal\"\r\n}"
+      },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDI4MzQ3LCJpYXQiOjE2ODE0MDQzNDcsImp0aSI6IjA5OTM4OTRkZTU2MTQwMzJiZWYwZTUwNjIzYTlmMTRjIiwidXNlcl9pZCI6MTB9.bNCgrUZXhlgmrYVTgwvQJbQ5TlFkLk4_NZcUkPfZO_8"
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 12
+    },
+    {
+      "_id": "F1AeU5jLzfbmAwgfh0TC8",
+      "_type": "request",
+      "method": "POST",
+      "url": "https://yollo.com.tm/yolloadmin/api/user/createuserapi/",
+      "name": "Register client worked",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"password\": \"Bank1234\",\r\n    \"name\": \"Kerim Durdyyew\",\r\n    \"phone\": \"99365553590\",\r\n    \"region_hi\": 2,\r\n    \"region_city\": 7,\r\n    \"address\": \"Ashgabat\"\r\n}"
+      },
+      "headers": [],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 13
+    },
+    {
+      "_id": "kVYN0TXkzMTWuGIHlYe4l",
+      "_type": "request",
+      "method": "GET",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/boxhistory/30",
+      "name": "Box history",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDI4MzQ3LCJpYXQiOjE2ODE0MDQzNDcsImp0aSI6IjA5OTM4OTRkZTU2MTQwMzJiZWYwZTUwNjIzYTlmMTRjIiwidXNlcl9pZCI6MTB9.bNCgrUZXhlgmrYVTgwvQJbQ5TlFkLk4_NZcUkPfZO_8"
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 14
+    },
+    {
+      "_id": "xS5ABPw-8NpgifJroKEoE",
+      "_type": "request",
+      "method": "POST",
+      "url": "https://yollo.com.tm/yolloadmin/api/box/boxhistory/30",
+      "name": "Box history post",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\r\n    \"userto\": 11,\r\n    \"status\": \"called\",\r\n    \"regionbh\": 6\r\n}"
+      },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxMjQ2MTQzLCJpYXQiOjE2ODEyMjIxNDMsImp0aSI6IjA4ZTkzM2U1NWM5MzQ0YzJhOWEzNGVmY2RkYzNkZDljIiwidXNlcl9pZCI6MTB9.rh4vPtB1n7XjOPsrkmvawjxyGk8VALP-3FslcrHE6-w"
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 15
+    },
+    {
+      "_id": "3oFqXFQnPI7YFhS9emEsJ",
+      "_type": "request",
+      "method": "GET",
+      "url": "https://yollo.com.tm/yolloadmin/api/user/cuserapi/",
+      "name": "Company user list",
+      "body": { "mimeType": "No Body" },
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDI4MzQ3LCJpYXQiOjE2ODE0MDQzNDcsImp0aSI6IjA5OTM4OTRkZTU2MTQwMzJiZWYwZTUwNjIzYTlmMTRjIiwidXNlcl9pZCI6MTB9.bNCgrUZXhlgmrYVTgwvQJbQ5TlFkLk4_NZcUkPfZO_8"
+        }
+      ],
+      "parameters": [],
+      "authentication": { "type": "No Auth" },
+      "parentId": "UaikLXj533affvEqfd1cX",
+      "workspaceId": "uPCFWWKwKScPA0AhWRgau",
+      "sortOrder": 16
+    }
+  ]
+}

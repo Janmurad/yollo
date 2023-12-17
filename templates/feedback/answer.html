@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %} {% block content %}
+
+<br />
+
+<div class="container">
+  <h2>Добавить сообщение</h2>
+  <br />
+  <div class="row col-sm-3">
+    <h4 style="width: max-content;">{{ form.comment.value }}</h4>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}      
+      
+      {{ form.answer }}
+      <div style="display: none;">
+        {{ form.comment }}
+        {{ form.user }}
+        {{ form.status }}
+        {{ form.type }}
+        {{ form.room }}
+        
+      </div>
+      <br>
+      <input type="submit" value="Сохранить" class="btn btn-primary" />
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

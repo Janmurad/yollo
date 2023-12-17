@@ -1,0 +1,110 @@
+{% extends 'base/base.html' %} {% block content %}
+
+<div class="container">
+  <br />
+  <h2 class="h2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="currentColor"
+      class="bi bi-box"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"
+      />
+    </svg>
+    Коробка
+  </h2>
+
+  <form method="POST" enctype="multipart/form-data" class="card-body cardbody-color needs-validation" novalidate>
+    {% csrf_token %}
+    <div class="row g-5">
+      <div class="col-md-8 col-lg-10">
+        {% comment %} <h4 class="mb-3">Billing address</h4> {% endcomment %}
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="panel" style="background: lightgreen; padding: 10px">
+                <label for="id_clientfrom" class="form-label">Клиент отправитель</label
+                ><br />
+                {{ form.clientfrom }} <br />
+                <label for="id_phonefrom" class="form-label">Телефон отправителья</label>
+                <br />
+                {{ form.phonefrom }}<br />
+                <label for="id_addressfrom" class="form-label"
+                  >Адрес отправителья</label
+                >
+                <br />
+                {{ form.addressfrom }}<br />
+                <label for="id_regionfrom" class="form-label"
+                  >Регион отправителья</label
+                >
+                <br />
+                {{ form.regionfrom }}<br />
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="panel" style="background: lightblue; padding: 10px">
+                <label for="id_clientto" class="form-label">Клиент получатель</label
+                ><br />
+                {{ form.clientto }}<br />
+                <label for="id_phoneto" class="form-label">Телефон получателья</label>
+                <br />
+                {{ form.phoneto }}<br />
+                <label for="id_addressto" class="form-label">Адрес получателья</label>
+                <br />
+                {{ form.addressto }}<br />
+                <label for="id_regionto" class="form-label">Регион получателья</label>
+                <br />
+                {{ form.regionto }}<br />
+              </div>
+            </div>
+          </div>
+          <br />
+          <table>
+            <tr>
+              <td><label for="id_tarif" class="form-label">Цена тарифа</label> </td>
+              <td><label for="id_amount" class="form-label">Цена коробки</label> </td>
+              <td></td>
+              <td>TПлатежoleg</td>
+            </tr>
+            <tr>
+              <td>{{ form.tarif }}</td>
+              <td>{{ form.amount }} </td>
+              <td>{{ form.valuta }}</td>
+              <td>{{ form.payment }}</td>
+            </tr>
+            <tr>
+              <td><label for="id_discount" class="form-label">Скидка</label></td>
+              <td><label for="id_weight" class="form-label">Вес</label></td>
+              <td><label for="id_boximg" class="form-label">Фото коробки</label></td>
+            </tr>
+            <tr>
+              <td>{{ form.discount }}</td>
+              <td>{{ form.weight }}</td>
+              <td>{{ form.boximg }}</td>
+            </tr>
+            <tr>
+              <td>Комментарий</td>
+            </tr>
+            <tr>
+              <td>{{ form.comment }}</td>
+            </tr>
+          </table>
+           
+          <div style="display: none">{{ form.status }} {{ form.user }} 
+            {{ form.placecount }}</div>
+
+          <hr class="my-3" />
+
+          <button class="w-40 btn btn-primary" type="submit">Подтверждать</button>
+        </form>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}
